@@ -13,7 +13,7 @@ app.use(cors());
 
 // MongoDB connection
 mongoose.connect(
-  process.env.MONGO_URI || "mongodb+srv://skjha9th:Saurabhjha@cluster0.ewg8cxv.mongodb.net/portfolioDB?retryWrites=true&w=majority&appName=Cluster0",
+  process.env.MONGO_URI ,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -45,3 +45,4 @@ app.get("/api/protected", (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
+
